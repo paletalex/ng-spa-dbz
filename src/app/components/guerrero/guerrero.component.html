@@ -1,0 +1,26 @@
+<h1 class="row animated fadeIn">{{guerrero.nombre}}</h1> <small>{{guerrero.poder}}</small>
+<hr>
+<div class="row animated fadeIn fast">
+
+    <div class="col-md-3">
+
+        <img src="{{guerrero.img}}" class='img-fluid'alt="">
+        <br><br>
+        <a [routerLink]="['/guerreros']" class='btn-block btn btn-outline-primary'>Regresar</a>
+
+    </div>
+
+
+    <div class="col-md-9">
+        <h3>{{guerrero.nombre}}</h3>
+        <hr>
+        <p>{{guerrero.descripcion}}</p>
+
+        <div>
+            <img *ngIf="guerrero.raza == 'Sayajin'" class='logogo' src="assets/img/dbz/esf.png" alt="">
+            <img *ngIf="guerrero.raza != 'Sayajin'" class='logogo' src="assets/img/dbz/ticha.jpg"alt="">
+        </div>
+
+
+    </div>
+</div>
